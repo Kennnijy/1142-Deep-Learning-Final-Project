@@ -113,28 +113,28 @@ def do_lr(swipe_buf, last_lr):
             return True, "Swipe Right (Fwd)", (100, 255, 200), time.time()
     return False, None, None, last_lr
 
+
 desktop_toggle = 0
 
 def do_action(action, tip_buf):
     """處理 switch / click（SWIPE 由主迴圈單獨處理）"""
     global desktop_toggle
     
-    if action == "switch":
+    if action == "HOME":
         if desktop_toggle == 0:
             pyautogui.hotkey("ctrl", "win", "left")
-            desktop_toggle = 1  # 必須先修改狀態，再 return！
+            desktop_toggle = 1
             return True, "Prev Desktop", (255, 100, 100)
             
         elif desktop_toggle == 1:
             pyautogui.hotkey("ctrl", "win", "right")
-            desktop_toggle = 0  # 必須先修改狀態，再 return！
+            desktop_toggle = 0
             return True, "Next Desktop", (100, 100, 255)
         
-    if action == "click":
+    if action == "CLICK":
         pyautogui.click()
-        return True, "click", (0, 255, 120)
+        return True, "CLICK", (0, 255, 120)
     return False, None, None
-
 
 # ── 初始化 ────────────────────────────────────────────────────────
 download_model()
@@ -170,7 +170,7 @@ print("手勢控制啟動！按 Q 離開\n")
 print("  one    (食指朝上)       → 移動滑鼠游標")
 print("  two_up (食指＋中指朝上) → 上下左右滑動")
 print("  ok     (OK 手勢)        → 左鍵點擊")
-print("  switch (讚 手勢)       → 顯示桌面 (Win+D)\n")
+print("  switch   (讚 手勢)       → 顯示桌面 (Win+D)\n")
 
 last_trigger  = 0.0
 last_lr       = 0.0
