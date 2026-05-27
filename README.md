@@ -150,3 +150,5 @@ Dense(5, Softmax)    ← one / two_up / ok / stop / no_gesture
 - 第一次執行時會自動下載 `hand_landmarker.task`（約 8 MB）
 - 建議在光線充足的環境使用，手部偵測較穩定
 - `pyautogui.FAILSAFE` 已停用，滑鼠不會因移到角落而拋出例外
+
+##因為我電腦的鏡頭壞掉，所以用手機當作外接鏡頭(Iriun Webcam)，用 test_cam.py 來測試不同鏡頭的編號(電腦預設鏡頭、手機外接鏡頭、其他擴充設備 等等)
