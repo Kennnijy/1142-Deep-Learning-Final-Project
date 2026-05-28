@@ -119,7 +119,7 @@ python main.py
 |------|--------|------|
 | `CONFIDENCE_THRESHOLD` | `0.85` | 信心值低於此值視為無手勢，調高減少誤觸 |
 | `COOLDOWN_SEC` | `1.0` | 點擊 / 桌面動作的冷卻秒數 |
-| `MOUSE_SMOOTH` | `0.4` | 滑鼠 EMA 平滑係數，越小越平滑但反應慢 |
+| `MOUSE_SMOOTH` | `0.7` | 滑鼠 EMA 平滑係數，越小越平滑但反應慢 |
 | `MOUSE_MARGIN` | `0.15` | 畫面邊緣忽略區，避免滑鼠卡角落 |
 | `NOTCH_SIZE` | `0.005` | 滾動卡點距離，調小讓滾動更靈敏 |
 | `NOTCH_SCROLL` | `12` | 每個卡點的滾動格數 |
